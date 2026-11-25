@@ -26,23 +26,28 @@
    let quantidadeVenCafe = 42;
    let taxaOperacional = 0.15;
    let totalClientes= 30;
-   let cookiesProduzidos = 126;
+   let cookiesProduzidos = 125;
    let capacidadeCaixa = 6;
 
    
-   faturamentoBruto = (precoCafe * quantidadeVenCafe) + (precoBolo * quantidadeVenBolo);
+   let faturamentoBruto = (precoCafe * quantidadeVenCafe) + (precoBolo * quantidadeVenBolo);
 
-   faturamentoLiquido = (faturamentoBruto) - (faturamentoBruto * taxaOperacional);
+   let faturamentoLiquido = (faturamentoBruto) - (faturamentoBruto * taxaOperacional);
 
    console.log(faturamentoBruto);
 
    console.log (faturamentoLiquido)
 
-   ticketMedio = faturamentoBruto / totalClientes;
+   let ticketMedio = faturamentoBruto / totalClientes;
 
    console.log (ticketMedio)
 
-   sobraCookies = 
+   let sobraCookies = cookiesProduzidos % capacidadeCaixa;
+
+   console.log(sobraCookies)
+
+
+
 
 
 
@@ -75,9 +80,32 @@
    1. O cliente atingiu a maioridade civil (18 anos)?
    2. O código digitado confere com o banco considerando apenas o valor?
    3. O código digitado confere com o banco considerando valor e tipo de dado?
-   4. O tipo do dado digitado difere do tipo esperado no banco?
+   4. O tipo do dado digitado defere do tipo esperado no banco?
    5. O saldo do cliente cobre o valor da compra?
    ========================================================================== */
+
+   let idade = 17;
+   let codigo ="100";
+   let codigoBanco = 100;
+   saldoDisponivel = 250.00;
+   valorCompra = 250.00;
+
+   let maiorIdade = idade >= 18;
+   console.log("O cliente atingiu a maioridade civil (18 anos)?", maiorIdade);
+
+   let codigoDigitado1 = codigo == "100";
+   console.log ("2. O código digitado confere com o banco considerando apenas o valor?", codigoDigitado1)
+
+   let codigoDigitado2 = codigo === codigoBanco;
+   console.log("3. O código digitado confere com o banco considerando valor e tipo de dado?", codigoDigitado2);
+
+   let senha =  codigo !== codigoBanco;
+   console.log ("4. O tipo do dado digitado defere do tipo esperado no banco?",senha )
+
+   let debito = saldoDisponivel == valorCompra;
+   console.log (" 5. O saldo do cliente cobre o valor da compra?", debito)
+
+
 
 
 
